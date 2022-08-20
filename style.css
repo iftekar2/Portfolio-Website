@@ -1,0 +1,454 @@
+/* This is where the Body section begins */
+*{
+    box-sizing: border-box;
+  }
+  html{
+    line-height: 1.15;
+  }
+  
+  body{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: black;
+    text-align: left;
+  }
+  /*This is where the Body section ends*/
+  
+  /*This is where the Nav Section begins*/
+  nav{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+  }
+  
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+  }
+  
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+  }
+  
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  .list.active, .list:hover{
+    background: #1b9bff;
+    transition: 0.5s;
+  }
+  
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  @media(max-width: 925px){
+    label.log{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+      position: fixed;
+    }
+  }
+  
+  @media(max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 60px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    .list:hover, .list.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  /*This is where the Nav Section ends*/
+  
+  /*This is where the Home section begins*/
+  .hello{
+    font-size: 30px;
+  }
+  
+  .name{
+    font-size: 30px; 
+    color: #0074D9;
+  }
+  
+  .what_i_do{
+    font-size: 30px;
+  }
+  
+  .home{
+    width: 100%;
+    background-color: white;
+    padding: 24px;
+    border-radius: 0.6px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 120px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  
+  .home__information{
+    margin-top: 100px;
+    margin-bottom: 80px;
+  }
+  
+  .btn{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 150px;
+    height: 45px;
+    border-radius: 45px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background-color: black;
+    transition: all 0.3s ease;
+    color: white;
+  }
+  
+  .btn:hover{
+    background: #2ceae5;
+    transform: translateY(-7px);
+    box-shadow: 0px 10px 25px rgba(46, 223, 229, 0.445);
+  }
+  
+  @media screen and (min-width: 550px){
+    .home{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      column-gap: 24px;
+    }
+    .home__image{
+      flex: 0 0 320px;
+    }
+  }
+  /*This is where the Home section ends */
+  
+  /*This is where the About Section begins*/
+  .about__title{
+    text-align: center;
+    bottom: -80px;
+  }
+  
+  .about{
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 1.5rem;
+    border-radius: 0.4rem;
+  }
+  
+  .about__image{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 0.4rem;
+    margin-top: 100px;
+  }
+  
+  @media screen and (min-width: 34.375rem){
+    .about{
+      width: 100%;
+      display: flex;
+      align-items: center; 
+      column-gap: 1.5rem;
+    }
+    .about__image{
+      flex: 0 0 20rem;
+    }
+  }
+  /*This is where the About Section ends*/
+  
+  /*This is where the Skills section begins */
+  .skill__section{
+    margin-top: 200px;
+  }
+  
+  .skills{
+    width: 100%;
+    margin-bottom: 70px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  
+  .main-skill{
+    margin-top: -50px;
+    padding-left: 50px;
+    padding-right: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+  }
+  
+  .main-skill .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  
+  .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.199);
+    border-radius: 25px;
+    margin-top: -15px;
+  }
+  
+  .skill-bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    border-radius: 25px;
+  }
+  
+  .skill-bar .bar .html{
+    width: 95%;
+    animation: html 2s;
+  }
+  
+  @keyframes html{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 95%;
+    }
+  }
+  
+  .skill-bar .bar .css{
+    width: 95%;
+    animation: css 2s;
+  }
+  
+  @keyframes css{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 95%;
+    }
+  }
+  
+  .skill-bar .bar .js{
+    width: 15%;
+    animation: js 2s;
+  }
+  
+  @keyframes js{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 15%;
+    }
+  }
+  
+  .skill-bar .bar .python{
+    width: 0%;
+    animation: python 2s;
+  }
+  
+  @keyframes python{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 0%;
+    }
+  }
+  /*This is where the Skills section ends */
+  
+  /*This is where the Projects Section begins */
+  .my-project{
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  
+  #project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 200px;
+  }
+  
+  .project-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+  }
+  
+  .project-box{
+    width: 351px;
+    border: 1px solid #ececec;
+    margin: 20px;
+  }
+  
+  .project-img img{
+    width: 350px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .project-text{
+    padding-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 500;
+  }
+  
+  .project-title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .project-title:hover{
+    color: #f33c3c;
+    transition: all ease 0.3s;
+  }
+  
+  .project-text p{
+    color: #9b9b9b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+  }
+  
+  .project-text a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  
+  .project-text a:hover{
+    color: #f33c3c;
+    transition: all ease 0.3s;
+  }
+  /*This is where the Projects Section ends*/
+  
+  /*This is where the Contact Section begins*/
+  #contact{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  
+  .contact-info{
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    width: 125%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-left: -10px;
+  }
+  
+  .contact-info input, .contact-info textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 10px;
+    outline: none;
+    background: white;
+    font-size: 20px;
+  }
+  
+  .contact-info button{
+    padding: 15px;
+    background-color: #ff5361;
+    color: black;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+  }
+  /*This is where the Project Section Ends*/
+  
+  /*This is where the Social Section begins*/
+  #social{
+    color: white;
+    margin-top: 100px;
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    background: black;
+    font-size: 30px;
+    text-decoration: none;
+  }
+  /*This is where the Social Section ends*/
